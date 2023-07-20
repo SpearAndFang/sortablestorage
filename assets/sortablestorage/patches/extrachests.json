@@ -1,0 +1,50 @@
+[
+  {
+    "op": "replace",
+    "path": "/class",
+    "value": "BlockGenericSortableTypedContainer",
+    "file": "extrachests:blocktypes/chests.json",
+    "side": "server",
+    "dependsOn": [ { "modid": "extrachests" } ]
+  },
+  {
+    "op": "replace",
+    "path": "/class",
+    "value": "BlockSortableLabeledChest",
+    "file": "extrachests:blocktypes/labeledchests.json",
+    "side": "server",
+    "dependsOn": [ { "modid": "extrachests" } ]
+  },
+  {
+    "op": "replace",
+    "path": "/entityclass",
+    "value": "BEGenericSortableTypedContainer",
+    "file": "extrachests:blocktypes/chests.json",
+    "side": "server",
+    "dependsOn": [ { "modid": "extrachests" } ]
+  },
+  {
+    "op": "replace",
+    "path": "/entityclass",
+    "value": "BESortableLabeledChest",
+    "file": "extrachests:blocktypes/labeledchests.json",
+    "side": "server",
+    "dependsOn": [ { "modid": "extrachests" } ]
+  },
+  {
+    "op": "replace",
+    "path": "/behaviors/1/name",
+    "value": "SortableContainer",
+    "file": "extrachests:blocktypes/chests.json",
+    "side": "server",
+    "dependsOn": [ { "modid": "extrachests" } ]
+  },
+  {
+    "op": "replace",
+    "path": "/behaviors/1/name",
+    "value": "SortableContainer",
+    "file": "extrachests:blocktypes/labeledchests.json",
+    "side": "server",
+    "dependsOn": [ { "modid": "extrachests" } ]
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "code": "storagevesselsortable",
+  "class": "BlockGenericSortableTypedContainer",
+  "entityclass": "BEGenericSortableTypedContainer",
+  "behaviorsByType": {
+    "*": [
+      { "name": "Lockable" },
+      { "name": "SortableContainer" },
+      { "name": "UnstableFalling" }
+    ]
+  },
+  "entityBehaviorsByType": {
+    "*": [ { "name": "Animatable" } ]
+  },
+  "attributes": {
+    "partialAttachable": true,
+    "inventoryClassName": "chest",
+    "defaultType": "normal",
+    "types": [ "normal" ],
+    "drop": {
+      "normal": true
+    },
+    "quantitySlots": {
+      "normal": 12
+    },
+    "dialogTitleLangCode": {
+      "normal": "game:vesselcontents"
+    },
+    "storageType": {
+      "normal": 32
+    },
+    "retrieveOnly": {
+      "normal": false
+    },
+    "spoilSpeedMulByFoodCat": {
+      "normal": {
+        "vegetable": 0.75,
+        "grain": 0.5
+      }
+    },
+    "shape": {
+      "normal": "game:block/clay/storagevessel"
+    },
+    "variantByGroup": "variant",
+    "variantByGroupInventory": "variant",
+    "openSound": "game:sounds/block/vesselopen",
+    "closeSound": "game:sounds/block/vesselclose"
+  },
+  "variantgroups": [
+    {
+      "code": "variant",
+      "states": [
+        "ashforest",
+        "chthonic",
+        "copper",
+        "earthen",
+        "rain",
+        "burned",
+        "cowrie",
+        "rime",
+        "oxblood",
+        "loam",
+        "undergrowth",
+        "beehive",
+        "harvest",
+        "honeydew",
+        "rutile",
+        "seasalt",
+        "springflowers",
+        "volcanic"
+      ]
+    }
+  ],
+  "shape": { "base": "game:block/clay/lootvessel" },
+  "texturesByType": {
+      "*-burned": {
+        "normal-ceramic": { "base": "game:block/clay/ceramic" },
+        "normal-top": { "base": "sortablestorage:block/clay/vessel/top/{variant}" },
+        "normal-sides": { "base": "game:block/clay/vessel/sides/{variant}" },
+        "normal-inside": { "base": "game:block/clay/vessel/inside/{variant}" }
+    },
+    "*": {
+      "normal-ceramic": { "base": "game:block/clay/ceramic" },
+      "normal-top": { "base": "game:block/clay/vessel/top/{variant}" },
+      "normal-sides": { "base": "game:block/clay/vessel/sides/{variant}" },
+      "normal-inside": { "base": "game:block/clay/vessel/inside/{variant}" }
+    }
+  },
+  "blockmaterial": "Ceramic",
+  "creativeinventory": {},
+  "creativeinventoryStacksByType": {
+    "*": [
+      {
+        "tabs": [ "general", "decorative", "sortable" ],
+        "stacks": [
+          {
+            "type": "block",
+            "code": "storagevesselsortable-{variant}",
+            "attributes": { "type": "normal" }
+          }
+        ]
+      }
+    ]
+  },
+  "replaceable": 1000,
+  "resistance": 0.8,
+  "maxStackSize": 4,
+  "sideAo": { "all": false },
+  "lightAbsorption": 0,
+  "sounds": {
+    "walk": "game:walk/stone",
+    "break": "game:block/ceramicplace",
+    "hit": "game:block/ceramichit",
+    "place": "game:block/ceramicplace"
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "collisionSelectionBox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.875,
+    "y2": 1,
+    "z2": 0.875
+  },
+  "heldTpIdleAnimation": "holdunderarm",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1,
+      "y": -0.5,
+      "z": -0.5
+    },
+    "rotation": {
+      "x": 25,
+      "y": -20,
+      "z": -99
+    },
+    "scale": 0.56
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -22.6,
+      "y": -22.5,
+      "z": 0
+    }
+  }
+}

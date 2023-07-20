@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "sortablestorage",
+  "name": "Sortable Storage",
+  "authors": [ "SpearAndFang" ],
+  "description": "Adds a sortable variant of vanilla chests, labeled chests, trunks, storage vessels, and baskets",
+  "version": "1.9.0",
+  "dependency": {
+    "game": ""
+  }
+}

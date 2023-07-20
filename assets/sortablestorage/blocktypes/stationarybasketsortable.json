@@ -1,0 +1,179 @@
+{
+  "code": "stationarybasketsortable",
+  "class": "BlockGenericSortableTypedContainer",
+  "entityclass": "BEGenericSortableTypedContainer",
+  "attributes": {
+    "inventoryClassName": "basket",
+    "defaultType": "reed",
+    "openSound": "game:sounds/block/basketopen",
+    "closeSound": "game:sounds/block/basketclose",
+    "types": [ "reed", "vine" ],
+    "drop": {
+      "reed": true,
+      "vine": true
+    },
+    "quantitySlots": {
+      "reed": 8,
+      "vine": 8
+    },
+    "dialogTitleLangCode": {
+      "reed": "game:basketcontents",
+      "vine": "game:basketcontents"
+    },
+    "storageType": {
+      "reed": 189,
+      "vine": 189
+    },
+    "retrieveOnly": {
+      "reed": false,
+      "vine": false
+    },
+    "shape": {
+      "reed": "game:block/reed/basket-normal",
+      "vine": "game:block/vines/basket-normal"
+    },
+    "variantByGroup": "side",
+    "variantByGroupInventory": null
+  },
+  "behaviors": [
+    { "name": "Lockable" },
+    { "name": "SortableContainer" },
+    {
+      "name": "HorizontalOrientable",
+      "properties": { "dropBlockFace": "east" }
+    }
+  ],
+  "entityBehaviors": [ { "name": "Animatable" } ],
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "creativeinventory": {},
+  "creativeinventoryStacksByType": {
+    "*-east": [
+      {
+        "tabs": [ "general", "decorative", "sortable" ],
+        "stacks": [
+          {
+            "type": "block",
+            "code": "stationarybasketsortable-east",
+            "attributes": { "type": "reed" }
+          },
+          {
+            "type": "block",
+            "code": "stationarybasketsortable-east",
+            "attributes": { "type": "vine" }
+          }
+        ]
+      }
+    ]
+  },
+  "heldTpIdleAnimation": "holdunderarm",
+  "shapeInventory": {
+    "base": "game:block/reed/basket-normal",
+    "rotateY": 270
+  },
+  "shapeByType": {
+    "*-north": {
+      "base": "game:block/reed/basket-normal",
+      "rotateY": 0
+    },
+    "*-east": {
+      "base": "game:block/reed/basket-normal",
+      "rotateY": 270
+    },
+    "*-west": {
+      "base": "game:block/reed/basket-normal",
+      "rotateY": 90
+    },
+    "*-south": {
+      "base": "game:block/reed/basket-normal",
+      "rotateY": 180
+    }
+  },
+
+  "_comment": "Must declare textures so they get added to the block texture atlas",
+  "textures": {
+    "reed-sidesWE": { "base": "game:block/reed/basket/normal-westeast" },
+    "reed-sidesSN": { "base": "game:block/reed/basket/normal-northsouth" },
+    "reed-lid": { "base": "sortablestorage:block/reed/basket/normal-lid" },
+
+    "vine-sidesWE": { "base": "game:block/vines/basket/normal-westeast" },
+    "vine-sidesSN": { "base": "game:block/vines/basket/normal-northsouth" },
+    "vine-lid": { "base": "sortablestorage:block/vines/basket/normal-lid" }
+  },
+  "blockmaterial": "Wood",
+  "replaceable": 900,
+  "resistance": 2,
+  "lightAbsorption": 0,
+  "sideAo": { "all": false },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "collisionbox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.8125,
+    "y2": 0.5,
+    "z2": 0.875,
+    "rotateYByType": {
+      "*-north": 270,
+      "*-east": 180,
+      "*-south": 90,
+      "*-west": 0
+    }
+  },
+  "selectionbox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.8125,
+    "y2": 0.5,
+    "z2": 0.875,
+    "rotateYByType": {
+      "*-north": 270,
+      "*-east": 180,
+      "*-south": 90,
+      "*-west": 0
+    }
+  },
+  "sounds": {
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  },
+  "materialDensity": 600,
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.9,
+      "y": -0.5,
+      "z": -0.3
+    },
+    "rotation": {
+      "x": 0,
+      "y": 90,
+      "z": -102
+    },
+    "scale": 0.56
+  },
+  "guiTransform": {
+    "origin": {
+      "x": 0.5,
+      "y": 0.3,
+      "z": 0.5
+    },
+    "rotation": {
+      "x": -22.6,
+      "y": -22.5,
+      "z": 0
+    },
+
+    "scale": 1.3
+  }
+}
+
