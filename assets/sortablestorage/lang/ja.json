@@ -37,5 +37,5 @@
     
   "block-normal-deepstorechestsortable-*": "Deep storage device (Sortable)",
   "block-deepstorechestsortable-normal-*": "Deep storage device (Sortable)",
-  "blockdesc-deepstorechest-*": "Where does it all go?"
+  "blockdesc-deepstorechestsortable-*": "Where does it all go?"
 }
