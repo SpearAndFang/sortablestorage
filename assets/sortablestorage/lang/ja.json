@@ -33,5 +33,9 @@
   "block-normal-storagevesselsortable-rutile": "貯蔵容器(ルチル)並べ替え可",
   "block-normal-storagevesselsortable-seasalt": "貯蔵容器(シーソルト)並べ替え可",
   "block-normal-storagevesselsortable-springflowers": "貯蔵容器(スプリングフラワー)並べ替え可",
-  "block-normal-storagevesselsortable-volcanic": "貯蔵容器(ボルカニック)並べ替え可"
+  "block-normal-storagevesselsortable-volcanic": "貯蔵容器(ボルカニック)並べ替え可",
+    
+  "block-normal-deepstorechestsortable-*": "Deep storage device (Sortable)",
+  "block-deepstorechestsortable-normal-*": "Deep storage device (Sortable)",
+  "blockdesc-deepstorechest-*": "Where does it all go?"
 }

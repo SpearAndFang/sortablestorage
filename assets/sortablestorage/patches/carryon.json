@@ -15,7 +15,7 @@
         }
       }
     },
-    "dependsOn": [ { "modid": "carrycapacity" } ]
+    "dependsOn": [ { "modid": "carryon" } ]
   },
   {
     "file": "sortablestorage:blocktypes/wood/chestsortable-labeled.json",
@@ -33,7 +33,7 @@
         }
       }
     },
-    "dependsOn": [ { "modid": "carrycapacity" } ]
+    "dependsOn": [ { "modid": "carryon" } ]
   },
   {
     "file": "sortablestorage:blocktypes/stationarybasketsortable.json",
@@ -46,7 +46,7 @@
         "interactDelay": 0.4,
         "slots": {
           "Hands": {
-            "animation": "carrycapacity:holdlight",
+            "animation": "carryon:holdlight",
             "walkSpeedModifier": -0.15
           },
           "Back": {
@@ -58,7 +58,7 @@
         }
       }
     },
-    "dependsOn": [ { "modid": "carrycapacity" } ]
+    "dependsOn": [ { "modid": "carryon" } ]
   },
   {
     "file": "sortablestorage:blocktypes/clay/storagevesselsortable.json",
@@ -75,7 +75,7 @@
         }
       }
     },
-    "dependsOn": [ { "modid": "carrycapacity" } ]
+    "dependsOn": [ { "modid": "carryon" } ]
   },
   {
     "file": "sortablestorage:blocktypes/deepstorechestsortable.json",
@@ -93,6 +93,6 @@
         }
       }
     },
-    "dependsOn": [ { "modid": "carrycapacity" } ]
+    "dependsOn": [ { "modid": "carryon" } ]
   }
 ]

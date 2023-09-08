@@ -28,5 +28,10 @@
   "block-normal-storagevesselsortable-rutile": "Storage vessel (Rutile) Sortable",
   "block-normal-storagevesselsortable-seasalt": "Storage vessel (Seasalt) Sortable",
   "block-normal-storagevesselsortable-springflowers": "Storage vessel (Springflowers) Sortable",
-  "block-normal-storagevesselsortable-volcanic": "Storage vessel (Volcanic) Sortable"
+  "block-normal-storagevesselsortable-volcanic": "Storage vessel (Volcanic) Sortable",
+  
+    
+  "block-normal-deepstorechestsortable-*": "Deep storage device (Sortable)",
+  "block-deepstorechestsortable-normal-*": "Deep storage device (Sortable)",
+  "blockdesc-deepstorechest-*": "Where does it all go?"
 }

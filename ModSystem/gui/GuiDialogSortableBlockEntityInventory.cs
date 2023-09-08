@@ -215,6 +215,19 @@ namespace SortableStorage.ModSystem
             {
                 // sort failed for some reason
             }
+            //repeat
+            try
+            {
+                var sortedDictionary = this.BuildDictionary(this.Inventory);
+                // merge stacks that are less than maxStackSize
+                sortedDictionary = this.MergeStacks(sortedDictionary);
+                // move inventory up and finalize
+                this.CollapseStacks(sortedDictionary);
+            }
+            catch
+            {
+                // sort failed for some reason
+            }
             return;
         }
 

@@ -1,0 +1,158 @@
+{
+  "code": "deepstorechestsortable",
+  "class": "BlockGenericSortableTypedContainer",
+  "entityclass": "BEGenericSortableTypedContainer",
+  "attributes": {
+    "partialAttachable": true,
+    "inventoryClassName": "chest",
+    "defaultType": "normal",
+    "types": [ "normal" ],
+    "rotatatableInterval": {
+      "*": "22.5degnot45deg"
+    },
+    "drop": {
+      "normal": true
+    },
+    "quantitySlots": {
+      "normal": 72
+    },
+    "quantityColumns": {
+      "normal": 9
+    },
+    "dialogTitleLangCode": {
+      "normal": "chestcontents"
+    },
+    "storageType": {
+      "normal": 189
+    },
+    "retrieveOnly": {
+      "normal": false
+    },
+    "shape": {
+      "normal": "game:block/deepstorechest"
+    },
+    "typedOpenSound": {
+      "normal": "game:sounds/effect/latch"
+    },
+    "typedCloseSound": {
+      "normal": "game:sounds/thud"
+    },
+    "variantByGroup": "side",
+    "variantByGroupInventory": null
+  },
+  "maxStackSize": 1,
+  "behaviors": [
+    { "name": "Lockable" },
+    { "name": "SortableContainer" }
+  ],
+  "entityBehaviors": [ { "name": "Animatable" } ],
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "game:abstract/horizontalorientation"
+    }
+  ],
+  "creativeinventory": {},
+  "creativeinventoryStacksByType": {
+    "*-east": [
+      {
+        "tabs": [ "general", "decorative", "sortable" ],
+        "stacks": [
+          {
+            "type": "block",
+            "code": "deepstorechestsortable-east",
+            "attributes": { "type": "normal" }
+          }
+        ]
+      }
+    ]
+  },
+  "heldTpIdleAnimation": "holdunderarm",
+  "shapeInventory": {
+    "base": "game:block/deepstorechest",
+    "rotateY": 270
+  },
+  "shapeByType": {
+    "*-north": {
+      "base": "game:block/deepstorechest",
+      "rotateY": 0
+    },
+    "*-east": {
+      "base": "game:block/deepstorechest",
+      "rotateY": 270
+    },
+    "*-west": {
+      "base": "game:block/deepstorechest",
+      "rotateY": 90
+    },
+    "*-south": {
+      "base": "game:block/deepstorechest",
+      "rotateY": 180
+    }
+  },
+  "_comment": "Must declare textures so they get added to the block texture atlas",
+  "textures": {
+    "normal-rain": { "base": "game:block/metal/ingot/cupronickel" }, //interior box
+    "normal-top": { "base": "game:block/metal/ingot/cupronickel" }, //interior box lid
+    "normal-bottom": { "base": "game:block/metal/ingot/uranium" }, //external box lid
+    "normal-tin": { "base": "game:block/metal/ingot/uranium" }, //latch
+    "normal-iron": { "base": "game:block/metal/ingot/uranium" }, //hinge
+    "normal-aged-top": { "base": "game:item/resource/temporalgear" }, //stuffing material in between boxes
+    "normal-floor": { "base": "game:block/metal/ingot/steel" } //bottom of external box, not lid
+  },
+  "blockmaterial": "Metal",
+  "replaceable": 100,
+  "resistance": 2,
+  "lightAbsorption": 0,
+  "sideAo": { "all": false },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "collisionbox": {
+    "x1": 0.0625,
+    "y1": 0,
+    "z1": 0.0625,
+    "x2": 0.9375,
+    "y2": 0.8755,
+    "z2": 0.9375
+  },
+  "selectionBox": {
+    "x1": 0.1625,
+    "y1": 0,
+    "z1": 0.1625,
+    "x2": 0.8375,
+    "y2": 0.6255,
+    "z2": 0.8375
+  },
+  "sounds": {
+    "place": "game:block/anvil",
+    "hit": "game:block/anvil",
+    "break": "game:block/anvil",
+    "walk": "game:walk/stone"
+  },
+  "materialDensity": 600,
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.9,
+      "y": -0.5,
+      "z": -0.3
+    },
+    "rotation": {
+      "x": 0,
+      "y": 90,
+      "z": -102
+    },
+    "scale": 0.56
+  },
+  "guiTransform": {
+    "origin": {
+      "x": 0.5,
+      "y": 0.4,
+      "z": 0.5
+    },
+    "scale": 1.16
+  }
+}

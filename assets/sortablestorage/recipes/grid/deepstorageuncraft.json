@@ -1,0 +1,20 @@
+{
+  "ingredientPattern": "S",
+  "shapeless": true,
+  "width": 1,
+  "height": 1,
+  "ingredients": {
+    "S": {
+      "type": "block",
+      "code": "sortablestorage:deepstorechestsortable-east",
+      "attributes": { "type": "normal" }
+    }
+  },
+  "output": {
+    "type": "block",
+    "code": "deepstorage:deepstorechest-east",
+    "attributes": { "type": "normal" }
+  }
+}
+
+

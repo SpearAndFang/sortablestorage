@@ -89,7 +89,10 @@
     <Content Include="assets/**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Remove="assets\sortablestorage\patches\carryon.json" />
     <None Remove="assets\sortablestorage\patches\charcoalpatch.json" />
+    <None Remove="assets\sortablestorage\patches\deepstorage.json" />
+    <None Remove="assets\sortablestorage\recipes\grid\deepstoragecraft.json" />
     <None Remove="assets\sortablestorage\recipes\grid\storage.json" />
     <None Update="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

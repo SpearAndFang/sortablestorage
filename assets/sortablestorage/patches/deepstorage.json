@@ -1,0 +1,41 @@
+[
+  {
+    "file": "sortablestorage:recipes/grid/deepstoragecraft.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "dependsOn": [
+      {
+        "modid": "dsd",
+        "invert": true
+      }
+    ],
+    "side": "server"
+  },
+  {
+    "file": "sortablestorage:recipes/grid/deepstorageuncraft.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "dependsOn": [
+      {
+        "modid": "dsd",
+        "invert": true
+      }
+    ],
+    "side": "server"
+  },
+  {
+    "file": "sortablestorage:blocktypes/deepstorechestsortable.json",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "dependsOn": [
+      {
+        "modid": "dsd",
+        "invert": true
+      }
+    ],
+    "side": "server"
+  }
+]
