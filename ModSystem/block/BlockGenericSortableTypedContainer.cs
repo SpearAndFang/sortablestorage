@@ -109,13 +109,13 @@ namespace SortableStorage.ModSystem
 
         public override void OnBeforeRender(ICoreClientAPI capi, ItemStack itemstack, EnumItemRenderTarget target, ref ItemRenderInfo renderinfo)
         {
-            var meshrefs = new Dictionary<string, MeshRef>();
+            var meshrefs = new Dictionary<string, MultiTextureMeshRef>();
             var key = "genericTypedContainerMeshRefs" + this.FirstCodePart() + this.SubtypeInventory;
             meshrefs = ObjectCacheUtil.GetOrCreate(capi, key, () =>
             {
                 var meshes = this.GenGuiMeshes(capi);
                 foreach (var val in meshes)
-                { meshrefs[val.Key] = capi.Render.UploadMesh(val.Value); }
+                { meshrefs[val.Key] = capi.Render.UploadMultiTextureMesh(val.Value); }
                 return meshrefs;
             });
 
@@ -123,8 +123,12 @@ namespace SortableStorage.ModSystem
             if (!meshrefs.TryGetValue(type, out renderinfo.ModelRef))
             {
                 var mesh = this.GenGuiMesh(capi, type);
-                meshrefs[type] = renderinfo.ModelRef = capi.Render.UploadMesh(mesh);
+                meshrefs[type] = renderinfo.ModelRef = capi.Render.UploadMultiTextureMesh(mesh);
             }
+
+            //NEED THIS 1.19?
+            base.OnBeforeRender(capi, itemstack, target, ref renderinfo);
+
         }
 
 
@@ -138,7 +142,7 @@ namespace SortableStorage.ModSystem
             { return; }
 
             var key = "genericTypedContainerMeshRefs" + this.FirstCodePart() + this.SubtypeInventory;
-            var meshrefs = ObjectCacheUtil.TryGet<Dictionary<string, MeshRef>>(api, key);
+            var meshrefs = ObjectCacheUtil.TryGet<Dictionary<string, MultiTextureMeshRef>>(api, key);
 
             if (meshrefs != null)
             {
@@ -177,9 +181,9 @@ namespace SortableStorage.ModSystem
 
             this.tmpTextureSource = tesselator.GetTextureSource(this, altTexNumber);
             var shapeloc = AssetLocation.Create(shapename, this.Code.Domain).WithPathPrefix("shapes/");
-            var shape = capi.Assets.TryGet(shapeloc + ".json")?.ToObject<Shape>();
+            var shape = Vintagestory.API.Common.Shape.TryGet(capi, shapeloc + ".json");
             if (shape == null)
-            { shape = capi.Assets.TryGet(shapeloc + "1.json")?.ToObject<Shape>(); }
+            { shape = Vintagestory.API.Common.Shape.TryGet(capi, shapeloc + "1.json"); }
             this.curType = type;
             return shape;
         }
@@ -213,9 +217,9 @@ namespace SortableStorage.ModSystem
 
                 blockModelData = this.GenMesh(capi, be.type, shapename);
                 var shapeloc = new AssetLocation(shapename).WithPathPrefix("shapes/");
-                var shape = capi.Assets.TryGet(shapeloc + ".json")?.ToObject<Shape>();
+                var shape = Vintagestory.API.Common.Shape.TryGet(capi, shapeloc + ".json");
                 if (shape == null)
-                { shape = capi.Assets.TryGet(shapeloc + "1.json").ToObject<Shape>(); }
+                { shape = Vintagestory.API.Common.Shape.TryGet(capi,shapeloc + "1.json"); }
 
                 capi.Tesselator.TesselateShape("typedcontainer-decal", shape, out var md, decalTexSource);
                 decalModelData = md;

@@ -1,7 +1,6 @@
 namespace SortableStorage.ModSystem
 {
     using System;
-    //using System.IO; //1.18 removed
     using Vintagestory.API.Client;
     using Vintagestory.API.Common;
     using Vintagestory.API.Config;
@@ -9,7 +8,7 @@ namespace SortableStorage.ModSystem
     using Vintagestory.API.MathTools;
     using Vintagestory.API.Server;
     using Vintagestory.GameContent;
-    using Vintagestory.API.Util; //1.18 added
+    using Vintagestory.API.Util;
 
     public class BESortableLabeledChest : BEGenericSortableTypedContainer
     {
@@ -18,9 +17,8 @@ namespace SortableStorage.ModSystem
         private int color;
         private int tempColor;
         private ItemStack tempStack;
-        //private GuiDialogBlockEntityTextInput textdialog; //1.18 removed
-        private float fontSize = 20; //1.18 added
-        private GuiDialogBlockEntityTextInput editDialog; //1.18 added
+        private float fontSize = 20;
+        private GuiDialogBlockEntityTextInput editDialog;
         public override float MeshAngle
         {
             get => base.MeshAngle;
@@ -89,49 +87,8 @@ namespace SortableStorage.ModSystem
 
             return base.OnPlayerRightClick(byPlayer, blockSel);
         }
-        // 1.18 replaced
-        /*
-        public override bool OnPlayerRightClick(IPlayer byPlayer, BlockSelection blockSel)
-        {
-            if (byPlayer?.Entity?.Controls?.Sneak == true)
-            {
-                var hotbarSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-                if (hotbarSlot?.Itemstack?.ItemAttributes?["pigment"]?["color"].Exists == true)
-                {
-                    var jobj = hotbarSlot.Itemstack.ItemAttributes["pigment"]["color"];
-                    var r = jobj["red"].AsInt();
-                    var g = jobj["green"].AsInt();
-                    var b = jobj["blue"].AsInt();
 
-                    this.tempColor = ColorUtil.ToRgba(255, r, g, b);
-                    this.tempStack = hotbarSlot.TakeOut(1);
-                    hotbarSlot.MarkDirty();
 
-                    if (this.Api.World is IServerWorldAccessor)
-                    {
-                        byte[] data;
-                        using (var ms = new MemoryStream())
-                        {
-                            var writer = new BinaryWriter(ms);
-                            writer.Write("BlockEntityTextInput");
-                            writer.Write("Edit chest label text");
-                            writer.Write(this.text);
-                            data = ms.ToArray();
-                        }
-
-                        ((ICoreServerAPI)this.Api).Network.SendBlockEntityPacket(
-                            (IServerPlayer)byPlayer,
-                            this.Pos.X, this.Pos.Y, this.Pos.Z,
-                            (int)EnumSignPacketId.OpenDialog,
-                            data
-                        );
-                    }
-                    return true;
-                }
-            }
-            return base.OnPlayerRightClick(byPlayer, blockSel);
-        }
-        */
         public override void OnReceivedClientPacket(IPlayer player, int packetid, byte[] data)
         {
             if (packetid == (int)EnumSignPacketId.SaveText)
@@ -145,7 +102,9 @@ namespace SortableStorage.ModSystem
                 this.MarkDirty(true);
 
                 // Tell server to save this chunk to disk again
-                this.Api.World.BlockAccessor.GetChunkAtBlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z).MarkModified();
+                //this.Api.World.BlockAccessor.GetChunkAtBlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z).MarkModified(); //1.19 removed
+                 
+                this.Api.World.BlockAccessor.GetChunkAtBlockPos(new BlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z, 0)).MarkModified(); //1.19
 
                 // 85% chance to get back the item
                 if (this.Api.World.Rand.NextDouble() < 0.85)
@@ -162,40 +121,7 @@ namespace SortableStorage.ModSystem
 
             base.OnReceivedClientPacket(player, packetid, data);
         }
-
-        // 1.18 replaced
-        /*
-        public override void OnReceivedClientPacket(IPlayer player, int packetid, byte[] data)
-        {
-            if (packetid == (int)EnumSignPacketId.SaveText)
-            {
-                using (var ms = new MemoryStream(data))
-                {
-                    var reader = new BinaryReader(ms);
-                    this.text = reader.ReadString();
-                    if (this.text == null)
-                        this.text = "";
-                }
-
-                this.color = this.tempColor;
-                this.MarkDirty(true);
-                this.Api.World.BlockAccessor.GetChunkAtBlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z).MarkModified();
-
-                if (this.Api.World.Rand.NextDouble() < 0.85)
-                {
-                    player.InventoryManager.TryGiveItemstack(this.tempStack);
-                }
-            }
-
-            if (packetid == (int)EnumSignPacketId.CancelEdit && this.tempStack != null)
-            {
-                player.InventoryManager.TryGiveItemstack(this.tempStack);
-                this.tempStack = null;
-            }
-            base.OnReceivedClientPacket(player, packetid, data);
-        }
-        */
-
+          
 
         public override void OnReceivedServerPacket(int packetid, byte[] data)
         {
@@ -229,52 +155,7 @@ namespace SortableStorage.ModSystem
 
             base.OnReceivedServerPacket(packetid, data);
         }
-
-        // 1.18 replaced
-        /*
-        public override void OnReceivedServerPacket(int packetid, byte[] data)
-        {
-            if (packetid == (int)EnumSignPacketId.OpenDialog)
-            {
-                using (var ms = new MemoryStream(data))
-                {
-                    var reader = new BinaryReader(ms);
-                    var dialogClassName = reader.ReadString();
-                    var dialogTitle = reader.ReadString();
-                    this.text = reader.ReadString();
-                    if (this.text == null)
-                        this.text = "";
-
-                    var clientWorld = (IClientWorldAccessor)this.Api.World;
-                    this.textdialog = new GuiDialogBlockEntityTextInput(dialogTitle, this.Pos, this.text, this.Api as ICoreClientAPI, 115, 4)
-                    {
-                        OnTextChanged = this.DidChangeTextClientSide,
-                        OnCloseCancel = () =>
-                        {
-                            this.labelrenderer?.SetNewText(this.text, this.color);
-                            (this.Api as ICoreClientAPI).Network.SendBlockEntityPacket(this.Pos.X, this.Pos.Y, this.Pos.Z, (int)EnumSignPacketId.CancelEdit, null);
-                        }
-                    };
-                    this.textdialog.TryOpen();
-                }
-            }
-
-            if (packetid == (int)EnumSignPacketId.NowText)
-            {
-                using (var ms = new MemoryStream(data))
-                {
-                    var reader = new BinaryReader(ms);
-                    this.text = reader.ReadString();
-                    if (this.text == null)
-                    { this.text = ""; }
-
-                    if (this.labelrenderer != null)
-                    { this.labelrenderer.SetNewText(this.text, this.color); }
-                }
-            }
-            base.OnReceivedServerPacket(packetid, data);
-        }
-        */
+           
 
         private void DidChangeTextClientSide(string text)
         {
@@ -284,18 +165,14 @@ namespace SortableStorage.ModSystem
             this.labelrenderer.fontSize = this.fontSize;
             this.labelrenderer?.SetNewText(text, this.tempColor);
         }
-        // 1.18 replaced
-        /*
-        private void DidChangeTextClientSide(string text)
-        { this.labelrenderer?.SetNewText(text, this.tempColor); }
-        */
+        
 
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldForResolving)
         {
             base.FromTreeAttributes(tree, worldForResolving);
             this.color = tree.GetInt("color");
             this.text = tree.GetString("text");
-            this.fontSize = tree.GetFloat("fontSize", 20); //1.18 added
+            this.fontSize = tree.GetFloat("fontSize", 20);
             this.labelrenderer?.SetNewText(this.text, this.color);
         }
 
@@ -304,7 +181,7 @@ namespace SortableStorage.ModSystem
             base.ToTreeAttributes(tree);
             tree.SetInt("color", this.color);
             tree.SetString("text", this.text);
-            tree.SetFloat("fontSize", this.fontSize); //1.18 added
+            tree.SetFloat("fontSize", this.fontSize);
         }
 
         public override void OnBlockRemoved()
@@ -315,10 +192,8 @@ namespace SortableStorage.ModSystem
                 this.labelrenderer.Dispose();
                 this.labelrenderer = null;
             }
-            //this.textdialog?.TryClose(); //1.18 removed
-            //this.textdialog?.Dispose(); //1.18 removed
-            this.editDialog?.TryClose(); //1.18 added
-            this.editDialog?.Dispose(); //1.18 added
+            this.editDialog?.TryClose();
+            this.editDialog?.Dispose();
         }
 
         public override void OnBlockBroken(IPlayer byPlayer = null)
@@ -332,10 +207,8 @@ namespace SortableStorage.ModSystem
             base.OnBlockUnloaded();
             this.labelrenderer?.Dispose();
 
-            //this.textdialog?.TryClose(); //1.18 removed
-            //this.textdialog?.Dispose(); //1.18 removed
-            this.editDialog?.TryClose(); //1.18 added
-            this.editDialog?.Dispose(); //1.18 added
+            this.editDialog?.TryClose();
+            this.editDialog?.Dispose();
         }
     }
 }

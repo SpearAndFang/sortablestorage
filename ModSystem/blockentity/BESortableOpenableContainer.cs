@@ -4,6 +4,7 @@ namespace SortableStorage.ModSystem
     using System.Text;
     using Vintagestory.API.Client;
     using Vintagestory.API.Common;
+    using Vintagestory.API.MathTools;
     using Vintagestory.API.Datastructures;
     using Vintagestory.GameContent;
 
@@ -39,7 +40,11 @@ namespace SortableStorage.ModSystem
             if (packetid < 1000)
             {
                 this.Inventory.InvNetworkUtil.HandleClientPacket(player, packetid, data);
-                this.Api.World.BlockAccessor.GetChunkAtBlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z).MarkModified();
+
+                // Tell server to save this chunk to disk again
+                //this.Api.World.BlockAccessor.GetChunkAtBlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z).MarkModified(); //1.19 removed
+                
+                this.Api.World.BlockAccessor.GetChunkAtBlockPos(new BlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z, 0)).MarkModified(); //1.19 added
                 return;
             }
 
