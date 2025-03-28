@@ -2,6 +2,7 @@ namespace SortableStorage.ModSystem
 {
     using Vintagestory.API.Common;
     using Vintagestory.API.Client;
+    using SortableStorage.ModConfig;
     using HarmonyLib;
 
 
@@ -27,6 +28,27 @@ namespace SortableStorage.ModSystem
             this.harmony.Unpatch(SSBlockGetPlacedBlockInfoOriginal, HarmonyPatchType.Postfix, "*");
             base.Dispose();
         }
+
+
+        public override void StartPre(ICoreAPI api)
+        {
+            var cfgFileName = "sortablestorage.json";
+            try
+            {
+                ModConfig fromDisk;
+                if ((fromDisk = api.LoadModConfig<ModConfig>(cfgFileName)) == null)
+                { api.StoreModConfig(ModConfig.Loaded, cfgFileName); }
+                else
+                { ModConfig.Loaded = fromDisk; }
+            }
+            catch
+            { api.StoreModConfig(ModConfig.Loaded, cfgFileName); }
+
+            api.World.Config.SetBool("useVanillaTextures", ModConfig.Loaded.useVanillaTextures);
+            api.World.Config.SetBool("sortByDisplayName", ModConfig.Loaded.sortByDisplayName);
+            base.StartPre(api);
+        }
+
 
         public override void Start(ICoreAPI api)
         {

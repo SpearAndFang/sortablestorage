@@ -7,6 +7,8 @@ namespace SortableStorage.ModSystem
     using System.Collections.Generic;
     using Vintagestory.API.Config;
     using Cairo;
+    using SortableStorage.ModConfig;
+
     //using System.Diagnostics;
 
     public class GuiDialogSortableBlockEntityInventory : GuiDialogBlockEntity
@@ -14,6 +16,7 @@ namespace SortableStorage.ModSystem
         private readonly EnumPosFlag screenPos;
         private readonly LoadedTexture sortButtonTexture;
         public override double DrawOrder => 0.2;
+        public bool sortByDisplayName = ModConfig.Loaded.sortByDisplayName;
 
         private readonly ElementBounds sortButtonBounds;
         public GuiDialogSortableBlockEntityInventory(string dialogTitle, InventoryBase inventory, BlockPos blockEntityPos, int cols, ICoreClientAPI capi)
@@ -110,11 +113,19 @@ namespace SortableStorage.ModSystem
             {
                 if (itemSlot.Itemstack != null)
                 {
-                    var friendlyName = itemSlot.Itemstack.Collectible.GetHeldItemName(itemSlot.Itemstack);
-                    if (!dictionary.TryGetValue(Lang.Get(friendlyName), out var slotlist))
+                    string sortName;
+                    if (sortByDisplayName)
+                    {
+                        sortName = itemSlot.Itemstack.Collectible.GetHeldItemName(itemSlot.Itemstack);
+                    }
+                    else
+                    {
+                        sortName = itemSlot.Itemstack.Collectible.Code.Path;
+                    }
+                    if (!dictionary.TryGetValue(Lang.Get(sortName), out var slotlist))
                     {
                         slotlist = new List<ItemSlot>();
-                        dictionary.Add(Lang.Get(friendlyName), slotlist);
+                        dictionary.Add(Lang.Get(sortName), slotlist);
                     }
                     slotlist.Add(itemSlot);
                 }
@@ -183,8 +194,16 @@ namespace SortableStorage.ModSystem
                         {
                             if (tmpItemSlot.Itemstack != null)
                             {
-                                var friendlyName = tmpItemSlot.Itemstack.Collectible.GetHeldItemName(tmpItemSlot.Itemstack);
-                                dictionary.TryGetValue(Lang.Get(friendlyName), out var tmpEntry);
+                                string sortName;
+                                if (sortByDisplayName)
+                                {
+                                    sortName = tmpItemSlot.Itemstack.Collectible.GetHeldItemName(tmpItemSlot.Itemstack);
+                                }
+                                else
+                                {
+                                    sortName = tmpItemSlot.Itemstack.Collectible.Code.Path;
+                                }
+                                dictionary.TryGetValue(Lang.Get(sortName), out var tmpEntry);
 
                                 var tmpcnt = 0;
                                 while (tmpEntry[tmpcnt] != tmpItemSlot)

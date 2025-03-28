@@ -1,0 +1,91 @@
+[
+  {
+    "op": "add",
+    "path": "/textures/reed-normal",
+    "value": {
+      "base": "game:block/reed/basket/normal"
+    },
+    "file": "sortablestorage:blocktypes/stationarybasketsortable.json",
+    "side": "Server",
+    "dependsOn": [ { "modid": "updatedtexturesandmodels" } ]
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-aged-chest_wood",
+    "value": {
+      "base": "game:block/wood/debarked/aged"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable.json",
+    "side": "Server",
+    "dependsOn": [ { "modid": "updatedtexturesandmodels" } ]
+
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-aged-rusty-iron2",
+    "value": {
+      "base": "game:block/metal/tarnished/rusty-iron2"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable.json",
+    "side": "Server",
+    "dependsOn": [ { "modid": "updatedtexturesandmodels" } ]
+
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-generic-chest_wood",
+    "value": {
+      "base": "game:block/wood/debarked/walnut"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable.json",
+    "side": "Server",
+    "dependsOn": [ { "modid": "updatedtexturesandmodels" } ]
+
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-generic-rusty-iron2",
+    "value": {
+      "base": "game:block/metal/tarnished/rusty-iron2"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable.json",
+    "side": "Server",
+    "dependsOn": [ { "modid": "updatedtexturesandmodels" } ]
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-labeled-chest_wood",
+    "value": {
+      "base": "game:block/wood/debarked/walnut"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable-labeled.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-labeled-rusty-iron2",
+    "value": {
+      "base": "game:block/metal/tarnished/rusty-iron2"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable-labeled.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-generic-chest_wood",
+    "value": {
+      "base": "game:block/wood/debarked/walnut"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable-trunk.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/textures/normal-generic-rusty-iron2",
+    "value": {
+      "base": "game:block/metal/tarnished/rusty-iron2"
+    },
+    "file": "sortablestorage:blocktypes/wood/chestsortable-trunk.json",
+    "side": "Server"
+  }
+]

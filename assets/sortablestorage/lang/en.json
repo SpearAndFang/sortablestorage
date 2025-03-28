@@ -9,8 +9,8 @@
   "block-stationarybasketsortable": "Basket (Sortable)",
   "block-stationarybasketsortable-*": "Basket (Sortable)",
   "blockdesc-stationarybasketsortable-*": "Used for storage.",
-  "block-reed-stationarybasketsortable-*": "Reed basket (Sortable)",
-  "block-vine-stationarybasketsortable-*": "Vines basket (Sortable)",
+  "block-reed-stationarybasketsortable-*": "Reed Chest (Sortable)",
+  "block-vine-stationarybasketsortable-*": "Vine Chest (Sortable)",
   "block-normal-storagevesselsortable-ashforest": "Storage vessel (Ash forest) Sortable",
   "block-normal-storagevesselsortable-chthonic": "Storage vessel (Chthonic) Sortable",
   "block-normal-storagevesselsortable-copper": "Storage vessel (Copper) Sortable",
@@ -29,9 +29,23 @@
   "block-normal-storagevesselsortable-seasalt": "Storage vessel (Seasalt) Sortable",
   "block-normal-storagevesselsortable-springflowers": "Storage vessel (Springflowers) Sortable",
   "block-normal-storagevesselsortable-volcanic": "Storage vessel (Volcanic) Sortable",
-  
-    
+
+
   "block-normal-deepstorechestsortable-*": "Deep storage device (Sortable)",
   "block-deepstorechestsortable-normal-*": "Deep storage device (Sortable)",
-  "blockdesc-deepstorechestsortable-*": "Where does it all go?"
+  "blockdesc-deepstorechestsortable-*": "Where does it all go?",
+
+  "useVanillaTextures": "Use Vanilla Textures",
+  "useVanillaTextures-Comment": "Enable this for better texturepack compatibility.",
+  "sortByDisplayName": "Sort By Display Name",
+  "sortByDisplayName-Comment": "Disable this to sort by block/item code instead.",
+
+  "block-normal-storagevesselsortable-cloisonne": "Storage vessel (Cloisonné) Sortable",
+  "block-normal-storagevesselsortable-cornflower": "Storage vessel (Cornflower) Sortable",
+  "block-normal-storagevesselsortable-talik": "Storage vessel (Talik) Sortable",
+  "block-normal-storagevesselsortable-caveaurora": "Storage vessel (Cave aurora) Sortable",
+  "block-normal-storagevesselsortable-collonade": "Storage vessel (Collonade) Sortable",
+  "block-normal-storagevesselsortable-rattlesnake": "Storage vessel (Rattlesnake) Sortable",
+  "block-normal-storagevesselsortable-waves": "Storage vessel (Waves) Sortable",
+  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable"
 }

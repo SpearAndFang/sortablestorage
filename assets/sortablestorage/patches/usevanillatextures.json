@@ -1,0 +1,68 @@
+[
+  {
+    "op": "replace",
+    "path": "/textures/normal-generic-accessories/base",
+    "value": "game:block/wood/trunk/accessories",
+    "file": "sortablestorage:blocktypes/wood/chestsortable.json",
+    "side": "Server",
+    "condition": {
+      "when": "useVanillaTextures",
+      "isValue": "true"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/textures/normal-generic-accessories/base",
+    "value": "game:block/wood/trunk/accessories",
+    "file": "sortablestorage:blocktypes/wood/chestsortable-trunk.json",
+    "side": "Server",
+    "condition": {
+      "when": "useVanillaTextures",
+      "isValue": "true"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/textures/normal-labeled-accessories/base",
+    "value": "game:block/wood/trunk/accessories",
+    "file": "sortablestorage:blocktypes/wood/chestsortable-labeled.json",
+    "side": "Server",
+    "condition": {
+      "when": "useVanillaTextures",
+      "isValue": "true"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/texturesByType/*-burned/normal-top/base",
+    "value": "game:block/clay/vessel/top/{variant}",
+    "file": "sortablestorage:blocktypes/clay/storagevesselsortable.json",
+    "side": "Server",
+    "condition": {
+      "when": "useVanillaTextures",
+      "isValue": "true"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/textures/reed-lid/base",
+    "value": "game:block/reed/basket/normal-lid",
+    "file": "sortablestorage:blocktypes/stationarybasketsortable.json",
+    "side": "Server",
+    "condition": {
+      "when": "useVanillaTextures",
+      "isValue": "true"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/textures/vine-lid/base",
+    "value": "game:block/vines/basket/normal-lid",
+    "file": "sortablestorage:blocktypes/stationarybasketsortable.json",
+    "side": "Server",
+    "condition": {
+      "when": "useVanillaTextures",
+      "isValue": "true"
+    }
+  }
+]

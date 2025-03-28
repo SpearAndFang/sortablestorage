@@ -1,0 +1,22 @@
+{
+  "version": 1.2,
+  "file": "sortablestorage.json",
+  "settings": {
+    "boolean": {
+      "USEVANILLATEXTURES": {
+        "name": "useVanillaTextures",
+        "ingui": "sortablestorage:useVanillaTextures",
+        "weight": 1,
+        "comment": "sortablestorage:useVanillaTextures-Comment",
+        "default": false
+      },
+      "SORTBYDISPLAYNAME": {
+        "name": "sortByDisplayName",
+        "ingui": "sortablestorage:sortByDisplayName",
+        "weight": 2,
+        "comment": "sortablestorage:sortByDisplayName-Comment",
+        "default": false
+      }
+    }
+  }
+}

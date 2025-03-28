@@ -67,17 +67,25 @@
         "rutile",
         "seasalt",
         "springflowers",
-        "volcanic"
+        "volcanic",
+        "cloisonne",
+        "cornflower",
+        "talik",
+        "caveaurora",
+        "collonade",
+        "rattlesnake",
+        "waves",
+        "wintersea"
       ]
     }
   ],
   "shape": { "base": "game:block/clay/lootvessel" },
   "texturesByType": {
-      "*-burned": {
-        "normal-ceramic": { "base": "game:block/clay/ceramic" },
-        "normal-top": { "base": "sortablestorage:block/clay/vessel/top/{variant}" },
-        "normal-sides": { "base": "game:block/clay/vessel/sides/{variant}" },
-        "normal-inside": { "base": "game:block/clay/vessel/inside/{variant}" }
+    "*-burned": {
+      "normal-ceramic": { "base": "game:block/clay/ceramic" },
+      "normal-top": { "base": "sortablestorage:block/clay/vessel/top/{variant}" },
+      "normal-sides": { "base": "game:block/clay/vessel/sides/{variant}" },
+      "normal-inside": { "base": "game:block/clay/vessel/inside/{variant}" }
     },
     "*": {
       "normal-ceramic": { "base": "game:block/clay/ceramic" },
@@ -142,6 +150,7 @@
     "scale": 0.56
   },
   "guiTransform": {
+    "scale": 1.25,
     "rotation": {
       "x": -22.6,
       "y": -22.5,

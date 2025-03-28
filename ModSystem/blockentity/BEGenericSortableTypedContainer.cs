@@ -160,6 +160,7 @@ namespace SortableStorage.ModSystem
             { BaseWeight = 1f };
             this.inventory.OnGetSuitability = (sourceSlot, targetSlot, isMerge) => (isMerge ? (this.inventory.BaseWeight + 3) : (this.inventory.BaseWeight + 1)) + (sourceSlot.Inventory is InventoryBasePlayer ? 1 : 0);
             this.inventory.OnGetAutoPullFromSlot = this.GetAutoPullFromSlot;
+            container.Reset();
 
             if (block?.Attributes != null)
             {
@@ -183,7 +184,13 @@ namespace SortableStorage.ModSystem
         {
             this.Inventory.LateInitialize(this.InventoryClassName + "-" + this.Pos.X + "/" + this.Pos.Y + "/" + this.Pos.Z, this.Api);
             this.Inventory.ResolveBlocksOrItems();
-            this.Inventory.OnAcquireTransitionSpeed = this.Inventory_OnAcquireTransitionSpeed;
+
+
+            //1.20            
+            container.LateInit();
+            //this.Inventory.OnAcquireTransitionSpeed = this.Inventory_OnAcquireTransitionSpeed;
+
+
             this.MarkDirty();
         }
 
@@ -249,9 +256,13 @@ namespace SortableStorage.ModSystem
                     tree.ToBytes(writer);
                     data = ms.ToArray();
                 }
+
+
+                var tmpPos = new BlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z, 0);
+
                 ((ICoreServerAPI)this.Api).Network.SendBlockEntityPacket(
                     (IServerPlayer)byPlayer,
-                    this.Pos.X, this.Pos.Y, this.Pos.Z,
+                    tmpPos,
                     (int)EnumBlockContainerPacketId.OpenInventory,
                     data
                 );

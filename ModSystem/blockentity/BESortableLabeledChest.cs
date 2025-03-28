@@ -72,11 +72,13 @@ namespace SortableStorage.ModSystem
                     this.tempStack = hotbarSlot.TakeOut(1);
                     hotbarSlot.MarkDirty();
 
+                    var tmpPos = new BlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z, 0);
+
                     if (this.Api is ICoreServerAPI sapi)
                     {
                         sapi.Network.SendBlockEntityPacket(
                             (IServerPlayer)byPlayer,
-                            this.Pos.X, this.Pos.Y, this.Pos.Z,
+                            tmpPos,
                             (int)EnumSignPacketId.OpenDialog
                         );
                     }
@@ -136,7 +138,8 @@ namespace SortableStorage.ModSystem
                     OnCloseCancel = () =>
                     {
                         this.labelrenderer?.SetNewText(this.text, this.color);
-                        (this.Api as ICoreClientAPI).Network.SendBlockEntityPacket(this.Pos.X, this.Pos.Y, this.Pos.Z, (int)EnumSignPacketId.CancelEdit, null);
+                        var tmpPos = new BlockPos(this.Pos.X, this.Pos.Y, this.Pos.Z, 0);
+                        (this.Api as ICoreClientAPI).Network.SendBlockEntityPacket(tmpPos, (int)EnumSignPacketId.CancelEdit, null);
                     }
                 };
                 this.editDialog.TryOpen();

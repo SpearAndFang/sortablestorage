@@ -1,8 +1,8 @@
 {
-    "comment_description": "Japanese localization file for 'Sortable Storage'.",
-    "comment_version": "Mod Version: v1.9.0",
-    "comment_author": "Translated By: Macoto Hino",
-    "comment_technical_details": "Machine translation using PCOT and DeepL.",
+  "comment_description": "Japanese localization file for 'Sortable Storage'.",
+  "comment_version": "Mod Version: v1.9.0",
+  "comment_author": "Translated By: Macoto Hino",
+  "comment_technical_details": "Machine translation using PCOT and DeepL.",
 
   "game:tabname-sortable": "Sortable Storage",
   "block-chestsortable-*": "チェスト(並べ替え可)",
@@ -34,8 +34,22 @@
   "block-normal-storagevesselsortable-seasalt": "貯蔵容器(シーソルト)並べ替え可",
   "block-normal-storagevesselsortable-springflowers": "貯蔵容器(スプリングフラワー)並べ替え可",
   "block-normal-storagevesselsortable-volcanic": "貯蔵容器(ボルカニック)並べ替え可",
-    
+
   "block-normal-deepstorechestsortable-*": "Deep storage device (Sortable)",
   "block-deepstorechestsortable-normal-*": "Deep storage device (Sortable)",
-  "blockdesc-deepstorechestsortable-*": "Where does it all go?"
+  "blockdesc-deepstorechestsortable-*": "Where does it all go?",
+
+  "useVanillaTextures": "Use Vanilla Textures",
+  "useVanillaTextures-Comment": "Enable this for better texturepack compatibility.",
+  "sortByDisplayName": "Sort By Display Name",
+  "sortByDisplayName-Comment": "Disable this to sort by block/item code instead.",
+
+  "block-normal-storagevesselsortable-cloisonne": "Storage vessel (Cloisonné) Sortable",
+  "block-normal-storagevesselsortable-cornflower": "Storage vessel (Cornflower) Sortable",
+  "block-normal-storagevesselsortable-talik": "Storage vessel (Talik) Sortable",
+  "block-normal-storagevesselsortable-caveaurora": "Storage vessel (Cave aurora) Sortable",
+  "block-normal-storagevesselsortable-collonade": "Storage vessel (Collonade) Sortable",
+  "block-normal-storagevesselsortable-rattlesnake": "Storage vessel (Rattlesnake) Sortable",
+  "block-normal-storagevesselsortable-waves": "Storage vessel (Waves) Sortable",
+  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable"
 }
