@@ -1,9 +1,0 @@
-[
-  {
-    "file": "game:itemtypes/resource/charcoal",
-    "side": "server",
-    "op": "replace",
-    "path": "/class",
-    "value": "ItemCoalPatched"
-  }
-]
