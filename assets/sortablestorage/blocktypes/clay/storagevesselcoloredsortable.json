@@ -10,49 +10,53 @@
   "entityBehaviors": [ { "name": "Animatable" } ],
   "variantgroups": [
     {
-      "code": "variant",
+      "code": "color",
       "states": [
-        "ashforest",
-        "chthonic",
-        "copper",
-        "burned",
-        "earthen",
-        "rain",
-        "cowrie",
-        "rime",
-        "oxblood",
-        "loam",
-        "undergrowth",
-        "beehive",
-        "harvest",
-        "honeydew",
-        "rutile",
-        "seasalt",
-        "springflowers",
-        "volcanic",
-        "cloisonne",
-        "cornflower",
-        "talik",
-        "caveaurora",
-        "collonade",
-        "rattlesnake",
-        "waves",
-        "wintersea"
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
       ]
+    },
+    {
+      "code": "state",
+      "states": [ "fired" ]
     }
   ],
   "shape": { "base": "game:block/clay/storagevessel" },
-  "texturesByType": {
+  "texturesbytype": {
     "*": {
-      "ceramic": { "base": "game:block/clay/ceramic" },
-      "top": { "base": "game:block/clay/vessel/top/{variant}" },
-      "sides": { "base": "game:block/clay/vessel/sides/{variant}" },
-      "inside": { "base": "game:block/clay/vessel/inside/{variant}" },
+      "ceramic": { "base": "game:block/clay/hardened/{color}" },
+      "top": {
+        "base": "game:block/clay/hardened/{color}",
+        "overlays": [ "game:block/clay/overlay/vessel-top" ]
+      },
+      "sides": {
+        "base": "game:block/clay/hardened/{color}",
+        "overlays": [ "game:block/clay/overlay/vessel-sides" ]
+      },
+      "inside": {
+        "base": "game:block/clay/hardened/{color}",
+        "overlays": [ "game:block/clay/overlay/vessel-inside" ]
+      },
 
-      "normal-ceramic": { "base": "game:block/clay/ceramic" },
-      "normal-top": { "base": "game:block/clay/vessel/top/{variant}" },
-      "normal-sides": { "base": "game:block/clay/vessel/sides/{variant}" },
-      "normal-inside": { "base": "game:block/clay/vessel/inside/{variant}" }
+      "normal-ceramic": { "base": "game:block/clay/hardened/{color}" },
+      "normal-top": {
+        "base": "game:block/clay/hardened/{color}",
+        "overlays": [ "game:block/clay/overlay/vessel-top" ]
+      },
+      "normal-sides": {
+        "base": "game:block/clay/hardened/{color}",
+        "overlays": [ "game:block/clay/overlay/vessel-sides" ]
+      },
+      "normal-inside": {
+        "base": "game:block/clay/hardened/{color}",
+        "overlays": [ "game:block/clay/overlay/vessel-inside" ]
+      }
     }
   },
   "attributes": {
@@ -87,8 +91,8 @@
     "shape": {
       "normal": "game:block/clay/storagevessel"
     },
-    "variantByGroup": "variant",
-    "variantByGroupInventory": "variant",
+    "variantByGroup": "color",
+    "variantByGroupInventory": "color",
     "openSound": "game:sounds/block/vesselopen",
     "closeSound": "game:sounds/block/vesselclose",
     "onTongTransform": {
@@ -106,7 +110,6 @@
     }
   },
   "blockmaterial": "Ceramic",
-  "creativeinventory": {},
   "creativeinventoryStacksByType": {
     "*": [
       {
@@ -114,7 +117,7 @@
         "stacks": [
           {
             "type": "block",
-            "code": "storagevesselsortable-{variant}",
+            "code": "storagevesselsortable-{color}-fired",
             "attributes": { "type": "normal" }
           }
         ]

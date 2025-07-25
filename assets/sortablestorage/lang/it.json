@@ -16,7 +16,6 @@
   "block-normal-storagevesselsortable-copper": "Urna recipiente (Rame) Ordinabile",
   "block-normal-storagevesselsortable-earthen": "Urna recipiente (Terra) Ordinabile",
   "block-normal-storagevesselsortable-rain": "Urna recipiente (Pioggia) Ordinabile",
-  "block-normal-storagevesselsortable-burned": "Urna recipiente (Ordinabile)",
   "block-normal-storagevesselsortable-cowrie": "Urna recipiente (Ciprea) Sortable",
   "block-normal-storagevesselsortable-rime": "Urna recipiente (Brina) Ordinabile",
   "block-normal-storagevesselsortable-oxblood": "Urna recipiente (Rosso scuro) Ordinabile",
@@ -47,5 +46,16 @@
   "block-normal-storagevesselsortable-collonade": "Storage vessel (Collonade) Sortable",
   "block-normal-storagevesselsortable-rattlesnake": "Storage vessel (Rattlesnake) Sortable",
   "block-normal-storagevesselsortable-waves": "Storage vessel (Waves) Sortable",
-  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable"
+  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable",
+
+  //2.4.0
+  "block-normal-storagevesselsortable-burned": "Storage Vessel (Dark brown ceramic) sortable",
+  "block-normal-storagevesselsortable-black-fired": "Storage Vessel (Black ceramic) sortable",
+  "block-normal-storagevesselsortable-brown-fired": "Storage Vessel (Brown ceramic) sortable",
+  "block-normal-storagevesselsortable-cream-fired": "Storage Vessel (Cream ceramic) sortable",
+  "block-normal-storagevesselsortable-fire-fired": "Storage Vessel (Fireclay ceramic) sortable",
+  "block-normal-storagevesselsortable-gray-fired": "Storage Vessel (Gray ceramic) sortable",
+  "block-normal-storagevesselsortable-orange-fired": "Storage Vessel (Orange ceramic) sortable",
+  "block-normal-storagevesselsortable-red-fired": "Storage Vessel (Red ceramic) sortable",
+  "block-normal-storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable"
 }

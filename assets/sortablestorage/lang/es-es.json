@@ -17,7 +17,6 @@
   "block-normal-storagevesselsortable-copper": "Vasija de Almacenaje Ordenable (Cobre)",
   "block-normal-storagevesselsortable-earthen": "Vasija de Almacenaje Ordenable (Barro)",
   "block-normal-storagevesselsortable-rain": "Vasija de Almacenaje Ordenable (Lluvia)",
-  "block-normal-storagevesselsortable-burned": "Vasija de Almacenaje Ordenable",
   "block-normal-storagevesselsortable-cowrie": "Vasija de Almacenaje Ordenable (Cauri)",
   "block-normal-storagevesselsortable-rime": "Vasija de Almacenaje Ordenable (Escarcha)",
   "block-normal-storagevesselsortable-oxblood": "Vasija de Almacenaje Ordenable (Sangre de Buey)",
@@ -48,5 +47,16 @@
   "block-normal-storagevesselsortable-collonade": "Vasija de Almacenaje Ordenable (Columnata)",
   "block-normal-storagevesselsortable-rattlesnake": "Vasija de Almacenaje Ordenable (Serpiente de Cascabel)",
   "block-normal-storagevesselsortable-waves": "Vasija de Almacenaje Ordenable (Olas)",
-  "block-normal-storagevesselsortable-wintersea": "Vasija de Almacenaje Ordenable (Mar de Invierno)"
+  "block-normal-storagevesselsortable-wintersea": "Vasija de Almacenaje Ordenable (Mar de Invierno)",
+
+  //2.4.0
+  "block-normal-storagevesselsortable-burned": "Storage Vessel (Dark brown ceramic) sortable",
+  "block-normal-storagevesselsortable-black-fired": "Storage Vessel (Black ceramic) sortable",
+  "block-normal-storagevesselsortable-brown-fired": "Storage Vessel (Brown ceramic) sortable",
+  "block-normal-storagevesselsortable-cream-fired": "Storage Vessel (Cream ceramic) sortable",
+  "block-normal-storagevesselsortable-fire-fired": "Storage Vessel (Fireclay ceramic) sortable",
+  "block-normal-storagevesselsortable-gray-fired": "Storage Vessel (Gray ceramic) sortable",
+  "block-normal-storagevesselsortable-orange-fired": "Storage Vessel (Orange ceramic) sortable",
+  "block-normal-storagevesselsortable-red-fired": "Storage Vessel (Red ceramic) sortable",
+  "block-normal-storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable"
 }

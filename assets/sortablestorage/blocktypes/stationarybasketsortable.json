@@ -28,6 +28,10 @@
       "reed": false,
       "vine": false
     },
+    "attachableCategoryCode": {
+      "reed": "basket",
+      "vine": "basket"
+    },
     "shape": {
       "reed": "game:block/reed/basket-normal",
       "vine": "game:block/vines/basket-normal"

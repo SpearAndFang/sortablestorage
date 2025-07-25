@@ -21,7 +21,6 @@
   "block-normal-storagevesselsortable-copper": "貯蔵容器(カッパー)並べ替え可",
   "block-normal-storagevesselsortable-earthen": "貯蔵容器(アースン)並べ替え可",
   "block-normal-storagevesselsortable-rain": "貯蔵容器(レイン)並べ替え可",
-  "block-normal-storagevesselsortable-burned": "貯蔵容器(並べ替え可)",
   "block-normal-storagevesselsortable-cowrie": "貯蔵容器(タカラガイ)並べ替え可",
   "block-normal-storagevesselsortable-rime": "貯蔵容器(ライム)並べ替え可",
   "block-normal-storagevesselsortable-oxblood": "貯蔵容器(オクスブラッド)並べ替え可",
@@ -51,5 +50,16 @@
   "block-normal-storagevesselsortable-collonade": "Storage vessel (Collonade) Sortable",
   "block-normal-storagevesselsortable-rattlesnake": "Storage vessel (Rattlesnake) Sortable",
   "block-normal-storagevesselsortable-waves": "Storage vessel (Waves) Sortable",
-  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable"
+  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable",
+
+  //2.4.0
+  "block-normal-storagevesselsortable-burned": "Storage Vessel (Dark brown ceramic) sortable",
+  "block-normal-storagevesselsortable-black-fired": "Storage Vessel (Black ceramic) sortable",
+  "block-normal-storagevesselsortable-brown-fired": "Storage Vessel (Brown ceramic) sortable",
+  "block-normal-storagevesselsortable-cream-fired": "Storage Vessel (Cream ceramic) sortable",
+  "block-normal-storagevesselsortable-fire-fired": "Storage Vessel (Fireclay ceramic) sortable",
+  "block-normal-storagevesselsortable-gray-fired": "Storage Vessel (Gray ceramic) sortable",
+  "block-normal-storagevesselsortable-orange-fired": "Storage Vessel (Orange ceramic) sortable",
+  "block-normal-storagevesselsortable-red-fired": "Storage Vessel (Red ceramic) sortable",
+  "block-normal-storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable"
 }

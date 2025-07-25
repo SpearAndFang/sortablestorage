@@ -10,13 +10,13 @@
   "block-stationarybasketsortable-*": "Basket (Sortable)",
   "blockdesc-stationarybasketsortable-*": "Used for storage.",
   "block-reed-stationarybasketsortable-*": "Reed Chest (Sortable)",
-  "block-vine-stationarybasketsortable-*": "Vine Chest (Sortable)",
+  "block-vine-stationarybasketsortable-*": "Papyrus Chest (Sortable)",
   "block-normal-storagevesselsortable-ashforest": "Storage vessel (Ash forest) Sortable",
   "block-normal-storagevesselsortable-chthonic": "Storage vessel (Chthonic) Sortable",
   "block-normal-storagevesselsortable-copper": "Storage vessel (Copper) Sortable",
   "block-normal-storagevesselsortable-earthen": "Storage vessel (Earthen) Sortable",
   "block-normal-storagevesselsortable-rain": "Storage vessel (Rain) Sortable",
-  "block-normal-storagevesselsortable-burned": "Storage vessel (Sortable)",
+
   "block-normal-storagevesselsortable-cowrie": "Storage vessel (Cowrie) Sortable",
   "block-normal-storagevesselsortable-rime": "Storage vessel (Rime) Sortable",
   "block-normal-storagevesselsortable-oxblood": "Storage vessel (Oxblood) Sortable",
@@ -29,7 +29,6 @@
   "block-normal-storagevesselsortable-seasalt": "Storage vessel (Seasalt) Sortable",
   "block-normal-storagevesselsortable-springflowers": "Storage vessel (Springflowers) Sortable",
   "block-normal-storagevesselsortable-volcanic": "Storage vessel (Volcanic) Sortable",
-
 
   "block-normal-deepstorechestsortable-*": "Deep storage device (Sortable)",
   "block-deepstorechestsortable-normal-*": "Deep storage device (Sortable)",
@@ -47,5 +46,16 @@
   "block-normal-storagevesselsortable-collonade": "Storage vessel (Collonade) Sortable",
   "block-normal-storagevesselsortable-rattlesnake": "Storage vessel (Rattlesnake) Sortable",
   "block-normal-storagevesselsortable-waves": "Storage vessel (Waves) Sortable",
-  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable"
+  "block-normal-storagevesselsortable-wintersea": "Storage vessel (Winter sea) Sortable",
+
+  //2.4.0
+  "block-normal-storagevesselsortable-burned": "Storage Vessel (Dark brown ceramic) sortable",
+  "block-normal-storagevesselsortable-black-fired": "Storage Vessel (Black ceramic) sortable",
+  "block-normal-storagevesselsortable-brown-fired": "Storage Vessel (Brown ceramic) sortable",
+  "block-normal-storagevesselsortable-cream-fired": "Storage Vessel (Cream ceramic) sortable",
+  "block-normal-storagevesselsortable-fire-fired": "Storage Vessel (Fireclay ceramic) sortable",
+  "block-normal-storagevesselsortable-gray-fired": "Storage Vessel (Gray ceramic) sortable",
+  "block-normal-storagevesselsortable-orange-fired": "Storage Vessel (Orange ceramic) sortable",
+  "block-normal-storagevesselsortable-red-fired": "Storage Vessel (Red ceramic) sortable",
+  "block-normal-storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable"
 }

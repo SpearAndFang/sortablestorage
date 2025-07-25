@@ -9,7 +9,7 @@
         "type": "block",
         "code": "sortablestorage:chestsortable-east",
         "attributes": { "type": "normal-generic" }
-      },
+      }
     },
     "output": {
       "type": "block",
@@ -86,7 +86,7 @@
     "output": {
       "type": "block",
       "code": "game:stationarybasket-east",
-      "attributes": { "type": "vine" }
+      "attributes": { "type": "papyrus" }
     }
   },
   {
@@ -106,7 +106,6 @@
           "copper",
           "earthen",
           "rain",
-          "burned",
           "cowrie",
           "rime",
           "oxblood",
@@ -134,6 +133,44 @@
       "type": "block",
       "code": "game:storagevessel-{variant}",
       "attributes": { "type": "normal" }
+    }
+  },
+  {
+    "ingredientPattern": "S",
+    "shapeless": true,
+    "width": 1,
+    "height": 1,
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "sortablestorage:storagevesselsortable-burned",
+        "attributes": { "type": "normal" }
+      }
+    },
+    "output": {
+      "type": "block",
+      "code": "game:storagevessel-blue-fired",
+      "attributes": { "type": "normal" }
+    }
+  },
+  {
+    "ingredientPattern": "S",
+    "shapeless": true,
+    "ingredients": {
+      "S": {
+        "type": "block",
+        "code": "sortablestorage:storagevesselsortable-*-fired",
+        "name": "type",
+        "allowedVariants": [ "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ],
+        "quantity": 1
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "game:storagevessel-{type}-fired",
+      "quantity": 1
     }
   }
 ]

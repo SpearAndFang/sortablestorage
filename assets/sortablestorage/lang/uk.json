@@ -15,7 +15,6 @@
   "block-normal-storagevesselsortable-chthonic": "Судина для зберігання (Хтонічна, Cортувальна)",
   "block-normal-storagevesselsortable-copper": "Судина для зберігання (Мідь, Cортувальна)",
   "block-normal-storagevesselsortable-earthen": "Судина для зберігання (Земляний, Cортувальна)",
-  "block-normal-storagevesselsortable-burned": "Судина для зберігання (Cортувальна)",
   "block-normal-storagevesselsortable-cowrie": "Судина для зберігання (Коурі, Cортувальна)",
   "block-normal-storagevesselsortable-rime": "Судина для зберігання (Рим, Cортувальна)",
   "block-normal-storagevesselsortable-oxblood": "Судина для зберігання (Oxblood, Cортувальна)",
@@ -45,5 +44,16 @@
   "block-normal-storagevesselsortable-collonade": "Посудина для зберігання «Колонада»",
   "block-normal-storagevesselsortable-rattlesnake": "Посудина для зберігання «Гримуча змія»",
   "block-normal-storagevesselsortable-waves": "Посудина для зберігання «Хвилі»",
-  "block-normal-storagevesselsortable-wintersea": "Посудина для зберігання «Зимове море»"
+  "block-normal-storagevesselsortable-wintersea": "Посудина для зберігання «Зимове море»",
+
+  //2.4.0
+  "block-normal-storagevesselsortable-burned": "Storage Vessel (Dark brown ceramic) sortable",
+  "block-normal-storagevesselsortable-black-fired": "Storage Vessel (Black ceramic) sortable",
+  "block-normal-storagevesselsortable-brown-fired": "Storage Vessel (Brown ceramic) sortable",
+  "block-normal-storagevesselsortable-cream-fired": "Storage Vessel (Cream ceramic) sortable",
+  "block-normal-storagevesselsortable-fire-fired": "Storage Vessel (Fireclay ceramic) sortable",
+  "block-normal-storagevesselsortable-gray-fired": "Storage Vessel (Gray ceramic) sortable",
+  "block-normal-storagevesselsortable-orange-fired": "Storage Vessel (Orange ceramic) sortable",
+  "block-normal-storagevesselsortable-red-fired": "Storage Vessel (Red ceramic) sortable",
+  "block-normal-storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable"
 }

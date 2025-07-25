@@ -3,10 +3,13 @@
   "class": "BlockSortableLabeledChest",
   "entityclass": "BESortableLabeledChest",
   "attributes": {
+    "reinforcable": true,
+    "humanoidTraversalCost": 100,
     "partialAttachable": true,
+    "wearableCategoryCode": "chest",
     "inventoryClassName": "chest",
     "defaultType": "normal-labeled",
-    "types": ["normal-labeled"],
+    "types": [ "normal-labeled" ],
     "drop": {
       "normal-labeled": true
     },

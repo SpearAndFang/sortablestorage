@@ -3,6 +3,8 @@
   "class": "BlockGenericSortableTypedContainer",
   "entityclass": "BEGenericSortableTypedContainer",
   "attributes": {
+    "humanoidTraversalCost": 100,
+    "reinforcable": true,
     "partialAttachable": true,
     "inventoryClassName": "chest",
     "defaultType": "normal-generic",
