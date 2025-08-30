@@ -64,7 +64,7 @@
     "file": "sortablestorage:blocktypes/clay/storagevesselsortable.json",
     "side": "server",
     "op": "add",
-    "path": "/behaviorsByType/*/-",
+    "path": "/behaviors/-",
     "value": {
       "name": "Carryable",
       "properties": {
