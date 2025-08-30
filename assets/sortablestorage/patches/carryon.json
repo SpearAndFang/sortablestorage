@@ -7,15 +7,15 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "translation": [ 0.0625, 0, 0 ],
-        "rotation": [ 0, 180, 0 ],
+        "translation": [0.0625, 0, 0],
+        "rotation": [0, 180, 0],
         "slots": {
           "Hands": {},
           "Back": {}
         }
       }
     },
-    "dependsOn": [ { "modid": "carryon" } ]
+    "dependsOn": [{ "modid": "carryon" }]
   },
   {
     "file": "sortablestorage:blocktypes/wood/chestsortable-labeled.json",
@@ -25,15 +25,15 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "translation": [ 0.0625, 0, 0 ],
-        "rotation": [ 0, 180, 0 ],
+        "translation": [0.0625, 0, 0],
+        "rotation": [0, 180, 0],
         "slots": {
           "Hands": {},
           "Back": {}
         }
       }
     },
-    "dependsOn": [ { "modid": "carryon" } ]
+    "dependsOn": [{ "modid": "carryon" }]
   },
   {
     "file": "sortablestorage:blocktypes/stationarybasketsortable.json",
@@ -51,14 +51,14 @@
           },
           "Back": {
             "walkSpeedModifier": 0.0,
-            "translation": [ 0.09375, 0, 0.03125 ],
-            "rotation": [ 0, 0, -90 ],
+            "translation": [0.09375, 0, 0.03125],
+            "rotation": [0, 0, -90],
             "scale": 0.6
           }
         }
       }
     },
-    "dependsOn": [ { "modid": "carryon" } ]
+    "dependsOn": [{ "modid": "carryon" }]
   },
   {
     "file": "sortablestorage:blocktypes/clay/storagevesselsortable.json",
@@ -68,14 +68,31 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "translation": [ -0.125, 0, 0 ],
+        "translation": [-0.125, 0, 0],
         "slots": {
           "Hands": {},
           "Back": {}
         }
       }
     },
-    "dependsOn": [ { "modid": "carryon" } ]
+    "dependsOn": [{ "modid": "carryon" }]
+  },
+  {
+    "file": "sortablestorage:blocktypes/clay/storagevesselcoloredsortable.json",
+    "side": "server",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [-0.125, 0, 0],
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }
+      }
+    },
+    "dependsOn": [{ "modid": "carryon" }]
   },
   {
     "file": "sortablestorage:blocktypes/deepstorechestsortable.json",
@@ -85,14 +102,14 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "translation": [ 0.0625, 0, 0 ],
-        "rotation": [ 0, 0, 0 ],
+        "translation": [0.0625, 0, 0],
+        "rotation": [0, 0, 0],
         "slots": {
           "Hands": {},
           "Back": {}
         }
       }
     },
-    "dependsOn": [ { "modid": "carryon" } ]
+    "dependsOn": [{ "modid": "carryon" }]
   }
 ]

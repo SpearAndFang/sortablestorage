@@ -58,5 +58,15 @@
   "block-normal-storagevesselsortable-gray-fired": "Storage Vessel (Gray ceramic) sortable",
   "block-normal-storagevesselsortable-orange-fired": "Storage Vessel (Orange ceramic) sortable",
   "block-normal-storagevesselsortable-red-fired": "Storage Vessel (Red ceramic) sortable",
-  "block-normal-storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable"
+  "block-normal-storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable",
+
+  //2,4.1 crafting grid wtf
+  "block--storagevesselsortable-black-fired": "Storage Vessel (Black ceramic) sortable",
+  "block--storagevesselsortable-brown-fired": "Storage Vessel (Brown ceramic) sortable",
+  "block--storagevesselsortable-cream-fired": "Storage Vessel (Cream ceramic) sortable",
+  "block--storagevesselsortable-fire-fired": "Storage Vessel (Fireclay ceramic) sortable",
+  "block--storagevesselsortable-gray-fired": "Storage Vessel (Gray ceramic) sortable",
+  "block--storagevesselsortable-orange-fired": "Storage Vessel (Orange ceramic) sortable",
+  "block--storagevesselsortable-red-fired": "Storage Vessel (Red ceramic) sortable",
+  "block--storagevesselsortable-tan-fired": "Storage Vessel (Tan ceramic) sortable"
 }
