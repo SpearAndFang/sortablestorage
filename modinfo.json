@@ -4,6 +4,6 @@
   "name": "Sortable Storage",
   "authors": [ "SpearAndFang" ],
   "description": "Adds a sortable variant of vanilla chests, labeled chests, trunks, storage vessels, and baskets",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "dependencies": {}
 }

@@ -34,17 +34,6 @@
   },
   {
     "op": "replace",
-    "path": "/texturesByType/*-burned/normal-top/base",
-    "value": "game:block/clay/vessel/top/{variant}",
-    "file": "sortablestorage:blocktypes/clay/storagevesselsortable.json",
-    "side": "Server",
-    "condition": {
-      "when": "useVanillaTextures",
-      "isValue": "true"
-    }
-  },
-  {
-    "op": "replace",
     "path": "/textures/reed-lid/base",
     "value": "game:block/reed/basket/normal-lid",
     "file": "sortablestorage:blocktypes/stationarybasketsortable.json",
